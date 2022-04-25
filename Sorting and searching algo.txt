@@ -1,0 +1,24 @@
+ALGORITHM Sort
+VAR
+    arr:ARRAY_OF INTEGER[100];
+    curr:INTEGER;
+    k,i,j:INTEGER;
+
+BEGIN
+FOR k FROM 0 TO 100 STEP 1 DO
+READ arr[k]
+END_FOR
+
+  FOR i FROM 1 to arr.length STEP 1 DO
+ curr:=arr[i];
+ j:=i-1;
+ WHILE (j>=0 AND arr[j]>curr) DO
+    arr[j+1]:=arr[j];
+    j:=j-1;
+
+ END_WHILE
+ arr[j+1]:=curr;
+ END_FOR
+
+ 
+END
